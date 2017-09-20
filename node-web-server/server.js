@@ -3,6 +3,7 @@ const hbs = require('hbs');
 
 var app = express();
 
+hbs.registerPartials(__dirname + '/views/partials');
 app.set('view engine', 'hbs');
 app.use(express.static(__dirname + '/public'));
 
@@ -27,6 +28,6 @@ app.get('/bad', (req, res) => {
   });
 });
 
-app.listen(3101, () => {
+app.listen(3103, () => {
   console.log('Server is upp');
 });
